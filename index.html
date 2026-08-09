@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>portfolio</title>
+  </head>
+  <body>
+    <div id="root">
+      <style>
+        body { margin: 0; background-color: #0f172a; }
+        #initial-loader {
+          position: fixed;
+          top: 0; left: 0; right: 0; bottom: 0;
+          background-color: #0f172a;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          z-index: 99999;
+          font-family: system-ui, -apple-system, sans-serif;
+        }
+        .loader-text {
+          color: #94a3b8;
+          font-size: 13px;
+          letter-spacing: 2px;
+          text-transform: uppercase;
+          animation: pulse 2s ease-in-out infinite;
+        }
+        @keyframes pulse {
+          0%, 100% { opacity: 0.4; }
+          50% { opacity: 1; }
+        }
+      </style>
+      <div id="initial-loader">
+        <div class="loader-text">Loading Workspace</div>
+      </div>
+    </div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
