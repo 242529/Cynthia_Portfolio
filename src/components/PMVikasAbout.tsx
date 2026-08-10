@@ -62,7 +62,7 @@ export default function PMVikasAbout() {
       padding: '80px 0vw 50px 0vw'
     }}>
       <div className="pm-about-anim" style={{ display: 'flex', flexDirection: 'column' }}>
-        <h2 style={{ fontSize: 'clamp(2.5rem, 4vw, 3.5rem)', margin: 0, marginBottom: '2rem', alignSelf: 'flex-start', color: 'white' }}>About the Program</h2>
+        <h2 style={{ fontSize: 'clamp(2.5rem, 4vw, 3.5rem)', margin: 0, marginBottom: '2rem', alignSelf: 'flex-start', color: 'white' }}>About the Program</ h2>
       </div>
 
       <p className="glass-panel pm-about-anim" style={{ maxWidth: '1200px', fontSize: '1.6rem', marginBottom: '2rem', lineHeight: '1.8', borderLeft: '4px solid #f59e0b', padding: '3rem' }}>

@@ -24,12 +24,12 @@ export default function PMVikasProjects() {
   }, { scope: container });
 
   const projects = [
-    "Smart Door Lock System",
-    "Smart Parking System",
-    "Automatic Plant Watering System",
-    "Auto Light + Alarm",
-    "Smart Temperature Fan System",
-    "Automatic Street Light"
+    { name: "Password Door Lock System", link: "https://github.com/242529/Password-Door-Lock-System" },
+    { name: "Smart Parking System", link: "https://github.com/242529/Smart-Parking-System" },
+    { name: "Automatic Plant Watering System", link: "https://github.com/242529/Automatic-Plant-Watering-System" },
+    { name: "Auto Light + Alarm", link: "https://github.com/242529/Auto-Light-Alarm" },
+    { name: "Smart Temperature Fan System", link: "https://github.com/242529/Smart-Temperature-Fan-System" },
+    { name: "Automatic Street Light", link: "https://github.com/242529/Automatic-Street-Light-System" }
   ];
 
   return (
@@ -38,8 +38,11 @@ export default function PMVikasProjects() {
 
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '2rem' }}>
         {projects.map((proj, i) => (
-          <div
+          <a
             key={i}
+            href={proj.link}
+            target="_blank"
+            rel="noopener noreferrer"
             className="project-card glass-panel"
             style={{
               padding: '1.5rem',
@@ -50,8 +53,9 @@ export default function PMVikasProjects() {
               border: '1px solid rgba(255, 255, 255, 0.05)',
               background: 'rgba(255, 255, 255, 0.02)',
               transition: 'all 0.3s ease',
-              cursor: 'default',
-              borderTop: '3px solid var(--accent)'
+              cursor: 'pointer',
+              borderTop: '3px solid var(--accent)',
+              textDecoration: 'none'
             }}
             onMouseEnter={(e) => {
               e.currentTarget.style.background = 'rgba(59, 130, 246, 0.05)';
@@ -66,9 +70,9 @@ export default function PMVikasProjects() {
           >
             <div style={{ display: 'flex', alignItems: 'center', gap: '0.8rem' }}>
               <Briefcase size={20} color="var(--accent)" />
-              <h3 style={{ color: 'white', fontSize: '1.2rem', margin: 0 }}>{proj}</h3>
+              <h3 style={{ color: 'white', fontSize: '1.2rem', margin: 0 }}>{proj.name}</h3>
             </div>
-          </div>
+          </a>
         ))}
       </div>
     </div>
